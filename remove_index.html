@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Home - The Palms Colombo</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/indexnew.css" rel="stylesheet">
+  <script src="script/scroll-hide.js"> </script>
+
+
+</head>
+
+<body>
+  	<!-- Header -->
+    <div class="header" id="header">
+  		<div class="container">
+  			<div class="site-name-container">
+          <a href="index.html" class="site-name">The Palms Colombo</a>
+  				<nav class="nav">
+					       <ul>
+				   <li><a href="gallery.html">Gallery</a></li>
+                   <li><a href="dining.html">Dining</a></li>
+                   <li><a href="rooms.html">Rooms</a></li>
+                   <li><a href="booking.html">Booking</a></li>
+                   <li><a href="index.html" class="active">Home</a></li>
+
+                 </ul>
+					</nav>
+        </div>
+      </div>
+  	</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <img src="Palms Images/The Palms.png" class="cmg">
+  <div class="slide">
+     <img class="mySlides" src="Palms Images/Main/main1.jpg" width="100%" height="680px">
+     <img class="mySlides" src="Palms Images/Main/main2.jpg" width="100%" height="680px">
+	 <img class="mySlides" src="Palms Images/Main/main3.jpg" width="100%" height="680px">
+	 <img class="mySlides" src="Palms Images/Main/main4.jpg" width="100%" height="680px">
+	 <img class="mySlides" src="Palms Images/Main/main5.jpg" width="100%" height="680px">
+	 <img class="mySlides" src="Palms Images/Main/main6.jpg" width="100%" height="680px">
+  </div>
+
+<!-- Script for Carousel -->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 5 seconds
+}
+</script>
+
+    <div class="main-content">
+      <div>
+        <h2 align="center" >A NEW LEVEL OF LUXURY ARRIVES IN COLOMBO</h2>
+        <br>
+
+        <h4 align="center">
+        Bejeweled as one of the finest five-star Colombo hotels located in-between Galle Face Green, the World Trade Centre and the Dutch Hospital Precinct, we welcome you to The Palms Colombo. With easy access for shopping, entertainment and your business needs, we will ensure your stay is perfect and your experiences are complete. <br>
+		</h4>
+		<p align="center">
+        A : 48, Janadhipathi Mawatha, Colombo 01, Sri Lanka. <br>
+        E : info@thepalmshotel.com <br>
+        T : +94 112 421 221
+        </p>
+
+      </div>
+    </div>
+
+
+
+	<br>
+<h3 class="sub-heading" align="center">A luxurious escape in the heart of the city</h3>
+<br>
+<center> The Palms, Colombo offers 500 guest rooms and suites, and 41 serviced apartments. <br>
+Our finely appointed rooms are among the largest in Colombo and offer striking views of the Indian Ocean, Beira Lake and the city beyond. <br>
+
+Refined furnishing materials, such as marble and silk, blend with contemporary light woods, complementing the urban and ocean-side location. <br>
+
+High-end technology sits comfortably alongside subtle luxury. <br>
+
+The 34 spacious suites are the finest in the city, and include personal butler service. <br>
+
+All rooms and suites feature signature Palms Beds – which utilize patented body-contouring technology – complimentary Wi-Fi Internet and premium Palms amenities. </center>
+
+			  <br>
+
+
+
+<div class="content">
+	<h2 class="heading" align="center">Featured Rooms</h2>
+        <div class="row ">
+          	<div class="colomn">
+				<img src="img/1.jpg" class="featured-images" />
+
+
+
+
+     		</div>
+		</div>
+</div>
+
+
+
+
+
+	<footer class="footer">
+
+			<p class="footer-heading">Find us on</p>
+
+			<p class="footer-links">
+				<img class="footer-social-icons" src="icons/facebook.png" width="50px" />
+        <img class="footer-social-icons" src="icons/twitter.png" width="50px" />
+        <img class="footer-social-icons" src="icons/instagram.png" width="50px" />
+        <img class="footer-social-icons" src="icons/youtube.png" width="50px" />
+			</p>
+      <p class="footer-company-name">The Palms Colombo &copy; 2018</p>
+
+		</footer>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- TEMPLATE BELOW -->
+<!-- DELETE THIS PART BELOW BEFORE SUBMIT -->
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Hello,<?php echo $userRow['email']; ?></title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/index.css" type="text/css"/>
+</head>
+<body>
+
+<!-- Navigation Bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Website Name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">First Link</a></li>
+                <li><a href="#">Second Link</a></li>
+                <li><a href="#">Third Link</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span
+                            class="glyphicon glyphicon-user"></span>&nbsp;Logged
+                        in: <?php echo $userRow['email']; ?>
+                        &nbsp;<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+    <!-- Jumbotron-->
+    <div class="jumbotron">
+        <h1>Hello, <?php echo $userRow['username']; ?></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at auctor est, in convallis eros. Nulla
+            facilisi. Donec ipsum nulla, hendrerit nec mauris vitae, lobortis egestas tortor. </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Example body text</h2>
+            <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et
+                magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            <p>
+                <small>This line of text is meant to be treated as fine print.</small>
+            </p>
+            <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+            <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+            <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+<!-- REMOVE THIS BEFORE SUBMISSION - LOGIN.PHP -->
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+</head>
+<body>
+
+<div class="container">
+
+
+    <div id="login-form">
+        <form method="post" autocomplete="off">
+
+            <div class="col-md-12">
+
+                <div class="form-group">
+                    <h2 class="">Login:</h2>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                </div>
+
+                <?php
+                if (isset($errMSG)) {
+
+                    ?>
+                    <div class="form-group">
+                        <div class="alert alert-danger">
+                            <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="email" name="email" class="form-control" placeholder="Email" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" name="pass" class="form-control" placeholder="Password" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block btn-primary" name="btn-login">Login</button>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                </div>
+
+                <div class="form-group">
+                    <a href="register.php" type="button" class="btn btn-block btn-danger"
+                       name="btn-login">Register</a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

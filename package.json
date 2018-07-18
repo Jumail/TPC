@@ -1,0 +1,19 @@
+{
+  "name": "tpc",
+  "version": "1.0.0",
+  "description": "A hotel website to book and manage rooms",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jumail/TPC.git"
+  },
+  "author": "Jumail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jumail/TPC/issues"
+  },
+  "homepage": "https://github.com/Jumail/TPC#readme"
+}
