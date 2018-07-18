@@ -1,3 +1,22 @@
+<?php
+ob_start();
+session_start();
+require_once 'dbconnect.php';
+
+
+  if(!isset($_SESSION['user'])) {
+    header("Location: login.php");
+    exit;
+  } else {
+    
+  }
+
+  // select logged in users detail
+  $res = $conn->query("SELECT * FROM users WHERE id=" . $_SESSION['user']);
+  $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
+
+ ?>
+
 <!doctype html>
 <html>
 <head>
@@ -27,11 +46,11 @@
 		</div>
   	</div>
 <br>
-<br>  
-<br>  
 <br>
-<br>  
-<br>   
+<br>
+<br>
+<br>
+<br>
  <section class="site-section">
       <div class="container">
         <div class="row">
@@ -41,7 +60,7 @@
                 <form action="index.html" method="post">
                   <div class="row">
                       <div class="col-sm-6 form-group">
-                          
+
                           <label for="">Arrival Date</label>
                           <div style="position: relative;">
                             <span class="fa fa-calendar icon" style="position: absolute; right: 10px; top: 10px;"></span>
@@ -50,14 +69,14 @@
                       </div>
 
                       <div class="col-sm-6 form-group">
-                          
+
                           <label for="">Departure Date</label>
                           <div style="position: relative;">
                             <span class="fa fa-calendar icon" style="position: absolute; right: 10px; top: 10px;"></span>
                             <input type='text' class="form-control" id='departure_date' />
                           </div>
                       </div>
-                      
+
                   </div>
 
 
@@ -107,10 +126,10 @@
               </div>
               </p>
 			</p>
-<br>  
-<br>  
-<br>  
-<br> 
+<br>
+<br>
+<br>
+<br>
 
 
 

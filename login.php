@@ -56,11 +56,8 @@ if (isset($_POST['btn-login'])) {
           <a href="index.html" class="site-name">The Palms Colombo</a>
   				<nav class="nav">
 					       <ul>
-				           <li><a href="gallery.html">Gallery</a></li>
-                   <li><a href="dining.html">Dining</a></li>
-                   <li><a href="rooms.html">Rooms</a></li>
-                   <li><a href="booking.html">Booking</a></li>
-                   <li><a href="index.html">Home</a></li>
+				           <li><a href="gallery.html">Login to continue</a></li>
+
 
                  </ul>
 					</nav>
@@ -74,13 +71,9 @@ if (isset($_POST['btn-login'])) {
 
           <div class="col-md-12">
 
-              <div class="form-group">
-                  <h2 class="">Create an account</h2>
-              </div>
 
-              <div class="form-group">
-                  <hr/>
-              </div>
+
+
 
               <?php
               if (isset($errMSG)) {
@@ -131,7 +124,7 @@ if (isset($_POST['btn-login'])) {
       </form>
     </div>
 
-    <br><br><br><br>
+    <br><br><br><br><br><br>
 
 
 

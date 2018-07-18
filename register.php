@@ -74,14 +74,11 @@ if (isset($_POST['signup'])) {
     <div class="header" id="header">
   		<div class="container">
   			<div class="site-name-container">
-          <a href="index.html" class="site-name">Sign Up</a>
+          <a href="index.html" class="site-name">The Palms Colombo</a>
   				<nav class="nav">
 					       <ul>
-				           <li><a href="gallery.html">Gallery</a></li>
-                   <li><a href="dining.html">Dining</a></li>
-                   <li><a href="rooms.html">Rooms</a></li>
-                   <li><a href="booking.html">Booking</a></li>
-                   <li><a href="index.html">Home</a></li>
+				           <li><a href="gallery.html">Create your account</a></li>
+
 
                  </ul>
 					</nav>

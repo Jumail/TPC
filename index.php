@@ -1,17 +1,19 @@
 <?php
 ob_start();
-session_start();
 require_once 'dbconnect.php';
 
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-    exit;
-}
+
 // select logged in users detail
 $res = $conn->query("SELECT * FROM users WHERE id=" . $_SESSION['user']);
 $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 ?>
+
+<!-- // Tried to autohide the Login,logout
+    // button but still needs some fixing to do -->
+<script type="text/javascript">
+  document.getElementId('autohide').style.display="none";
+</script>
 
 <!DOCTYPE HTML>
 <html>
@@ -36,7 +38,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
   				<nav class="nav">
 					       <ul>
 
-                   <li class="dropdown">
+                   <li class="dropdown" id="autohide">
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                           aria-expanded="false">
                            &nbsp;Logged
@@ -44,13 +46,13 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                            &nbsp;</a>
 
                    </li>
-                   <li>
+                   <li id="autohide">
                     <a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>
                    </li>
-				   <li><a href="gallery.html">Gallery</a></li>
+				           <li><a href="gallery.html">Gallery</a></li>
                    <li><a href="dining.html">Dining</a></li>
                    <li><a href="rooms.html">Rooms</a></li>
-                   <li><a href="booking.html">Booking</a></li>
+                   <li><a href="booking.php">Booking</a></li>
                    <li><a href="index.php" class="active">Home</a></li>
 
                  </ul>
@@ -109,19 +111,19 @@ function carousel() {
 
 
 
-	<br>
-<h3 class="sub-heading" align="center">A luxurious escape in the heart of the city</h3>
-<br>
-<center> The Palms, Colombo offers 500 guest rooms and suites, and 41 serviced apartments. <br>
-Our finely appointed rooms are among the largest in Colombo and offer striking views of the Indian Ocean, Beira Lake and the city beyond. <br>
+        <br>
+          <h3 class="sub-heading" align="center">A luxurious escape in the heart of the city</h3>
+          <br>
+          <center> The Palms, Colombo offers 500 guest rooms and suites, and 41 serviced apartments. <br>
+          Our finely appointed rooms are among the largest in Colombo and offer striking views of the Indian Ocean, Beira Lake and the city beyond. <br>
 
-Refined furnishing materials, such as marble and silk, blend with contemporary light woods, complementing the urban and ocean-side location. <br>
+          Refined furnishing materials, such as marble and silk, blend with contemporary light woods, complementing the urban and ocean-side location. <br>
 
-High-end technology sits comfortably alongside subtle luxury. <br>
+          High-end technology sits comfortably alongside subtle luxury. <br>
 
-The 34 spacious suites are the finest in the city, and include personal butler service. <br>
+          The 34 spacious suites are the finest in the city, and include personal butler service. <br>
 
-All rooms and suites feature signature Palms Beds – which utilize patented body-contouring technology – complimentary Wi-Fi Internet and premium Palms amenities. </center>
+          All rooms and suites feature signature Palms Beds – which utilize patented body-contouring technology – complimentary Wi-Fi Internet and premium Palms amenities. </center>
 
 			  <br>
 
