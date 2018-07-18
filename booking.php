@@ -70,6 +70,12 @@ require_once 'dbconnect.php';
          <p>
              <form action="booking_updater.php" method="post">
                <div class="row">
+                 <div class="col-md-12 form-group">
+                   <label for="name">Name</label>
+                   <input  id="name" class="form-control ">
+                 </div>
+               </div>
+               <div class="row">
                  <div class="form-group">
                     <label class="control-label">CHECK-IN DATE</label>
                     <div class='input-group date' id='datetime1'>

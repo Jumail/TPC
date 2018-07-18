@@ -14,12 +14,13 @@
     $roomType = trim($_POST['room']);
     $guestNumber = trim($_POST['room']);
     $contact = trim($_POST['contact']);
-    $email = $userRow['email'];
+    $email = "fakeemail.com";
     $remarks = trim($_POST['remarks']);
 
-    $sql = "INSERT INTO booking(name,checkindate, checkoutdate, roomType, guestNumber, contact, email, remarks) VALUES('$name', '$checkindate', '$checkoutdate', '$roomType', '$guestNumber', '$contact', '$email', '$remarks')";
+    $result = mysql_query($conn, "INSERT INTO booking(name,checkindate, checkoutdate, roomType, guestNumber, contact, email, remarks) VALUES('$name', '$checkindate', '$checkoutdate', '$roomType', '$guestNumber', '$contact', '$email', '$remarks')");
+    // $sql = "INSERT INTO booking(name,checkindate, checkoutdate, roomType, guestNumber, contact, email, remarks) VALUES('$name', '$checkindate', '$checkoutdate', '$roomType', '$guestNumber', '$contact', '$email', '$remarks')";
 
-    if (!mysql_query($sql,$con)) {
+    if (!mysql_query($sql,$conn)) {
 
       die('Error: ' . mysql_error());
 
