@@ -20,16 +20,22 @@ require_once 'dbconnect.php';
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Home - The Palms Colombo</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+    <title>Home - The Palms Colombo</title>
+
       <link href="css/style.css" rel="stylesheet">
       <script src="script/scroll-hide.js"> </script>
 
-      <!-- Bootstrap Scripts -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -40,11 +46,11 @@ require_once 'dbconnect.php';
                 <a href="index.html" class="site-name">The Palms Colombo</a>
   				<nav class="nav">
 						<ul>
-                       		<li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
                    <li><a href="dining.html">Dining</a></li>
                    <li><a href="rooms.html">Rooms</a></li>
-                   <li><a href="booking.html" class="active">Booking</a></li>
-                   <li><a href="index.html">Home</a></li>
+                   <li><a href="booking.php" class="active">Booking</a></li>
+                   <li><a href="index.php">Home</a></li>
     					</ul>
 					</nav>
 			</div>
@@ -58,45 +64,93 @@ require_once 'dbconnect.php';
 <br>
  <section class="site-section">
    <div class="container">
-   </br></br></br></br>
-   <div class="container">
-      <div class='col-md-5'>
-          <div class="form-group">
-              <div class='input-group date' id='datetimepicker6'>
-                  <input type='text' class="form-control" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-          </div>
-      </div>
-      <div class='col-md-5'>
-          <div class="form-group">
-              <div class='input-group date' id='datetimepicker7'>
-                  <input type='text' class="form-control" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-          </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      $(function () {
-          $('#datetimepicker6').datetimepicker();
-          $('#datetimepicker7').datetimepicker({
-              useCurrent: false //Important! See issue #1075
-          });
-          $("#datetimepicker6").on("dp.change", function (e) {
-              $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-          });
-          $("#datetimepicker7").on("dp.change", function (e) {
-              $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-          });
-      });
-    </script>
-    </div>
-  </section>
+     <div class="row">
+       <div class="">
+         <h2 class="" align="center">Book your stay online</h2>
+         <p>
+             <form action="index.html" method="post">
+               <div class="row">
+                 <div class="form-group">
+                    <label class="control-label">CHECK-IN DATE</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                       <input type='text' class="form-control" />
+                       <span class="input-group-addon">
+                       <span class="glyphicon glyphicon-calendar"></span>
+                       </span>
+                    </div>
+                    <script>
+                      $(function () {
+                        $('#datetimepicker1').datetimepicker();
+                     });
+                    </script>
+                 </div>
+
+                 <div class="form-group">
+                    <label class="control-label">CHECK-IN DATE</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                       <input type='text' class="form-control" />
+                       <span class="input-group-addon">
+                       <span class="glyphicon glyphicon-calendar"></span>
+                       </span>
+                    </div>
+                    <script>
+                      $(function () {
+                        $('#datetimepicker1').datetimepicker();
+                     });
+                    </script>
+                 </div>
+
+               </div>
+
+
+               <div class="row">
+                 <div class="col-md-6 form-group">
+                   <label for="room">Select Your Room</label>
+                   <select name="" id="room" class="form-control">
+                     <option value="">1 Room</option>
+                     <option value="">2 Rooms</option>
+                     <option value="">3 Rooms</option>
+                     <option value="">4 Rooms</option>
+                     <option value="">5 Rooms</option>
+                   </select>
+                 </div>
+
+                 <div class="col-md-6 form-group">
+                   <label for="room">Number of Guests</label>
+                   <select name="" id="room" class="form-control">
+                     <option value="">1 Guest</option>
+                     <option value="">2 Guests</option>
+                     <option value="">3 Guests</option>
+                     <option value="">4 Guests</option>
+                     <option value="">5+ Guests</option>
+                   </select>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-md-12 form-group">
+                   <label for="email">Email</label>
+                   <input type="email" id="email" class="form-control ">
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-md-12 form-group">
+                   <label for="message">Write a Note or a Request</label>
+                   <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class=" ">
+                   <input type="submit" value="Reserve Now" class="btn btn-primary" style="color:#9FF" >
+                 </div>
+               </div>
+             </form>
+           </div>
+           </div>
+           </div>
+           </p>
+   </p>
+
+
 
 
 
