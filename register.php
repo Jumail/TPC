@@ -35,10 +35,10 @@ if (isset($_POST['signup'])) {
 
         $user_id = mysqli_insert_id($conn);
         if ($user_id > 0) {
-            $_SESSION['user'] = $user_id; // set session and redirect to index page
+            $_SESSION['user'] = $user_id; // set session and redirect to booking page
             if (isset($_SESSION['user'])) {
                 print_r($_SESSION);
-                header("Location: index.php");
+                header("Location: booking.php");
                 exit;
             }
 

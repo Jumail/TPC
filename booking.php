@@ -68,11 +68,11 @@ require_once 'dbconnect.php';
        <div class="">
          <h2 class="" align="center">Book your stay online</h2>
          <p>
-             <form action="index.html" method="post">
+             <form action="booking_updater.php" method="post">
                <div class="row">
                  <div class="form-group">
                     <label class="control-label">CHECK-IN DATE</label>
-                    <div class='input-group date' id='datetimepicker1'>
+                    <div class='input-group date' id='datetime1'>
                        <input type='text' class="form-control" />
                        <span class="input-group-addon">
                        <span class="glyphicon glyphicon-calendar"></span>
@@ -80,14 +80,14 @@ require_once 'dbconnect.php';
                     </div>
                     <script>
                       $(function () {
-                        $('#datetimepicker1').datetimepicker();
+                        $('#datetime1').datetimepicker();
                      });
                     </script>
                  </div>
 
                  <div class="form-group">
-                    <label class="control-label">CHECK-IN DATE</label>
-                    <div class='input-group date' id='datetimepicker2'>
+                    <label class="control-label">CHECK-OUT DATE</label>
+                    <div class='input-group date' id='datetime2'>
                        <input type='text' class="form-control" />
                        <span class="input-group-addon">
                        <span class="glyphicon glyphicon-calendar"></span>
@@ -95,7 +95,7 @@ require_once 'dbconnect.php';
                     </div>
                     <script>
                       $(function () {
-                        $('#datetimepicker2').datetimepicker();
+                        $('#datetime2').datetimepicker();
                      });
                     </script>
                  </div>
@@ -107,17 +107,16 @@ require_once 'dbconnect.php';
                  <div class="col-md-6 form-group">
                    <label for="room">Select Your Room</label>
                    <select name="" id="room" class="form-control">
-                     <option value="">1 Room</option>
-                     <option value="">2 Rooms</option>
-                     <option value="">3 Rooms</option>
-                     <option value="">4 Rooms</option>
-                     <option value="">5 Rooms</option>
+                     <option value="">Deluxe Lake View</option>
+                     <option value="">Deluxe Ocean View</option>
+                     <option value="">Premier Balcony View</option>
+                     <option value="">Premier Ocean View</option>
                    </select>
                  </div>
 
                  <div class="col-md-6 form-group">
-                   <label for="room">Number of Guests</label>
-                   <select name="" id="room" class="form-control">
+                   <label for="guest">Number of Guests</label>
+                   <select name="" id="guest" class="form-control">
                      <option value="">1 Guest</option>
                      <option value="">2 Guests</option>
                      <option value="">3 Guests</option>
@@ -126,29 +125,29 @@ require_once 'dbconnect.php';
                    </select>
                  </div>
                </div>
+
                <div class="row">
                  <div class="col-md-12 form-group">
-                   <label for="email">Email</label>
-                   <input type="email" id="email" class="form-control ">
+                   <label for="contact">Contact Number</label>
+                   <input  id="contact" class="form-control ">
                  </div>
                </div>
+
                <div class="row">
                  <div class="col-md-12 form-group">
-                   <label for="message">Write a Note or a Request</label>
-                   <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                   <label for="remarks">Remarks</label>
+                   <textarea name="remarks" id="remarks" class="form-control " cols="30" rows="8"></textarea>
                  </div>
                </div>
                <div class="row">
                  <div class=" ">
-                   <input type="submit" value="Reserve Now" class="btn btn-primary" style="color:#9FF" >
+                   <input type="submit" value="Reserve Now" class="btn btn-primary" >
                  </div>
                </div>
              </form>
            </div>
            </div>
            </div>
-           </p>
-   </p>
 
 
 
