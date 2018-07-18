@@ -45,16 +45,16 @@ require_once 'dbconnect.php';
   			<div class="site-name-container">
                 <a href="index.html" class="site-name">The Palms Colombo</a>
   				<nav class="nav">
-						<ul>
+            <ul>
                   <li><a href="gallery.html">Gallery</a></li>
                    <li><a href="dining.html">Dining</a></li>
                    <li><a href="rooms.html">Rooms</a></li>
                    <li><a href="booking.php" class="active">Booking</a></li>
                    <li><a href="index.php">Home</a></li>
     					</ul>
-					</nav>
-			</div>
-		</div>
+  </nav>
+  </div>
+  </div>
   	</div>
 <br>
 <br>
@@ -87,7 +87,7 @@ require_once 'dbconnect.php';
 
                  <div class="form-group">
                     <label class="control-label">CHECK-IN DATE</label>
-                    <div class='input-group date' id='datetimepicker1'>
+                    <div class='input-group date' id='datetimepicker2'>
                        <input type='text' class="form-control" />
                        <span class="input-group-addon">
                        <span class="glyphicon glyphicon-calendar"></span>
@@ -95,7 +95,7 @@ require_once 'dbconnect.php';
                     </div>
                     <script>
                       $(function () {
-                        $('#datetimepicker1').datetimepicker();
+                        $('#datetimepicker2').datetimepicker();
                      });
                     </script>
                  </div>
@@ -157,19 +157,19 @@ require_once 'dbconnect.php';
 
 
 
-	<footer class="footer">
+  <footer class="footer">
 
-			<p class="footer-heading">Find us on</p>
+  <p class="footer-heading">Find us on</p>
 
-			<p class="footer-links">
-				<img class="footer-social-icons" src="icons/facebook.png" width="50px" />
+  <p class="footer-links">
+  <img class="footer-social-icons" src="icons/facebook.png" width="50px" />
         <img class="footer-social-icons" src="icons/twitter.png" width="50px" />
         <img class="footer-social-icons" src="icons/instagram.png" width="50px" />
         <img class="footer-social-icons" src="icons/youtube.png" width="50px" />
-			</p>
+  </p>
       <p class="footer-company-name">The Palms Colombo &copy; 2018</p>
 
-		</footer>
+  </footer>
 
   </body>
 </html>
