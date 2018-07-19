@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 15, 2018 at 05:13 AM
+-- Generation Time: Jul 19, 2018 at 03:05 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -21,39 +21,26 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `booking` (
-  `booking_id` int(200) NOT NULL,
-  `total_adult` int(50) NOT NULL,
-  `total_children` int(50) NOT NULL,
-  `checkin_date` date NOT NULL,
-  `checkout_date` date NOT NULL,
-  `special_requirement` text NOT NULL,
-  `payment_status` varchar(50) NOT NULL,
-  `total_amount` double DEFAULT NULL,
-  `deposit` double NOT NULL,
-  `booking_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `telephone_no` varchar(30) NOT NULL,
-  `add_line1` varchar(100) NOT NULL,
-  `add_line2` varchar(100) NOT NULL,
-  `city` varchar(30) NOT NULL,
-  `state` varchar(30) NOT NULL,
-  `postcode` varchar(30) NOT NULL,
-  `country` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `checkindate` date NOT NULL,
+  `checkoutdate` date NOT NULL,
+  `roomType` varchar(255) NOT NULL,
+  `guestNumber` int(255) NOT NULL,
+  `contact` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `remarks` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `booking`
 --
 
-INSERT INTO `booking` (`booking_id`, `total_adult`, `total_children`, `checkin_date`, `checkout_date`, `special_requirement`, `payment_status`, `total_amount`, `deposit`, `booking_date`, `first_name`, `last_name`, `email`, `telephone_no`, `add_line1`, `add_line2`, `city`, `state`, `postcode`, `country`) VALUES
-(127, 2, 0, '2014-12-05', '2014-12-07', '', 'pending', 440, 66, '2014-12-04 20:52:53', 'Mohd Zulkarnain', 'Jaranee', 'mrzulkarnine@gmail.com', '0128951744', '307 Kpg Kanchong Jaya Gedong', 'None', 'Serian', 'Sarawak', '50600', 'Malaysia'),
-(128, 1, 0, '2014-12-05', '2014-12-06', '', 'pending', 360, 54, '2014-12-05 03:49:58', 'Mohd Zulkarnain', 'Jaranee', 'mrzulkarnine@gmail.com', '0128951744', '307 Kpg Kanchong Jaya Gedong', 'None', 'Serian', 'Sarawak', '50600', 'Malaysia'),
-(129, 1, 0, '2014-12-05', '2014-12-07', '', 'pending', 240, 36, '2014-12-05 04:53:27', 'Mohd Zulkarnain', 'Jaranee', 'mrzulkarnine@gmail.com', '0128951744', '307 Kpg Kanchong Jaya Gedong', 'None', 'Serian', 'Sarawak', '50600', 'Malaysia'),
-(130, 1, 0, '2014-12-05', '2014-12-07', '', 'pending', 480, 72, '2014-12-05 04:58:13', 'Mohd Zulkarnain', 'Jaranee', 'mrzulkarnine@gmail.com', '0128951744', '307 Kpg Kanchong Jaya Gedong', 'None', 'Serian', 'Sarawak', '50600', 'Malaysia'),
-(131, 2, 0, '2015-05-21', '2015-05-23', '', 'pending', 240, 36, '2015-05-20 19:16:14', 'Mohd Zulkarnain', 'Jaranee', 'mrzulkarnine@gmail.com', '0128951744', '307 Kpg Kanchong Jaya Gedong', '', 'Serian', 'Sarawak', '50600', 'Malaysia'),
-(132, 2, 0, '2015-05-21', '2015-05-23', '', 'pending', 920, 138, '2015-05-20 19:18:52', 'Mohd Zulkarnain', 'Jaranee', 'mrzulkarnine@gmail.com', '0128951744', '307 Kpg Kanchong Jaya Gedong', '', 'Serian', 'Sarawak', '50600', 'Malaysia');
+INSERT INTO `booking` (`id`, `name`, `checkindate`, `checkoutdate`, `roomType`, `guestNumber`, `contact`, `email`, `remarks`) VALUES
+(1, 'John', '2018-07-20', '2018-07-22', 'Premier Ocean View', 2, '231313131', 'fakeemail@email.com', ''),
+(2, 'Hill', '2018-07-23', '2018-07-27', 'Premier Ocean View', 3, '4313531', 'fakeemail@email.com', ''),
+(3, 'John', '2018-07-20', '2018-07-22', 'Premier Ocean View', 2, '231313131', 'fakeemail@email.com', ''),
+(4, 'Hill', '2018-07-23', '2018-07-27', 'Premier Ocean View', 3, '4313531', 'fakeemail@email.com', '');
 
 -- --------------------------------------------------------
 
@@ -159,7 +146,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 -- Indexes for table `booking`
 --
 ALTER TABLE `booking`
-  ADD PRIMARY KEY (`booking_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `room`
@@ -193,7 +180,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `room`
