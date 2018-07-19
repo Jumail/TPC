@@ -45,13 +45,7 @@
         <a href="index.html" class="site-name">The Palms Colombo Management</a>
         <nav class="nav">
                <ul>
-                 <li id="autohide">
-                  <a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a>
-                 </li>
-                 <li><a href="gallery.html">Gallery</a></li>
-                 <li><a href="dining.html">Dining</a></li>
-                 <li><a href="rooms.html">Rooms</a></li>
-                 <li><a href="booking.php">Booking</a></li>
+                 
                  <li><a href="index.php" class="active">Reservations</a></li>
 
                </ul>
@@ -85,7 +79,14 @@
       <tbody>
 
         <?php
-          $result = mysqli_query($con,"SELECT * FROM Persons");
+          $stmt = $conn->prepare("SELECT email FROM users WHERE email=?");
+          $stmt->bind_param("s", $email);
+          $stmt->execute();
+          $result = $stmt->get_result();
+          $stmt->close();
+
+          $result = mysqli_query('',"SELECT * FROM Persons");
+          $stmts->bind_param("sss", $uname, $email, $password);
           while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
             echo "<td>" .$row['name']. "</td>";
